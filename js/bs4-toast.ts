@@ -167,10 +167,8 @@ class bs4Toast {
                 sel.css('margin-top', neMargin + 'px');
             });
 
-            this.nextPadding -=100; 
-            
+            this.nextPadding -=100;    
         });
-
         this.active++;
         return false;
     }

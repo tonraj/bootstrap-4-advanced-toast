@@ -95,7 +95,7 @@ class bs4Toast {
                     src.value = options.icon.src;
                     Imgwrapper.setAttributeNode(src);
                     headerWrapper.appendChild(Imgwrapper);
-                    this.nextPadding += 40;
+                    //this.nextPadding += 40;
                 }
                 else if (options.icon.type == "fontawesome") {
                     var iwrapper = document.createElement('i');
@@ -103,7 +103,7 @@ class bs4Toast {
                     iwrapper.classList.add("fa");
                     iwrapper.classList.add(options.icon.class);
                     headerWrapper.appendChild(iwrapper);
-                    this.nextPadding += 40;
+                    //this.nextPadding += 40; 
                 }
                 else {
                     console.error('bs4Toast : Icon type is should be image or fontawesome. Please go through the Docs.');

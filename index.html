@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Bootstrap 4 Advanced Toast by Rajedra</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="/css/bs4Toast.css" rel="stylesheet" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    
+
+  </head>
+  <body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Bootstrap 4 Advanced Toast</h5>
+    <a class="btn btn-outline-primary" href="https://github.com/tonraj/bootstrap-4-advanced-toast" target="_blank">Download</a>
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="offset-md-2 col-md-8 text-center">
+      <h1 class="display-4">Bootstrap 4 Advanced Toast</h1>
+      <p class="lead mt-3">This is built with Bootstrap 4 Native Toast and JQuery with positon on Top Right and customisable options. </p>
+      
+      <div class="mt-5">
+        <button onclick="toast();" class="btn btn-primary">Primary</button>
+        <button onclick="dangerT();" class="btn btn-danger">Danger</button>
+        <button onclick="warning();" class="btn btn-warning">Warning</button>
+        <button onclick="buttontoast();" class="btn btn-primary">with Buttons</button>
+        <button onclick="icont();" class="btn btn-primary">with Icon</button>
+        <button onclick="imaget();" class="btn btn-primary">with Image</button>
+        
+      </div>
+    </div>
+  </div>
+
+ 
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/bs4-toast.js"></script>
+<script>
+
+
+
+  function toast(){
+    bs4Toast.primary('Primary Toast', 'This is Primary toast example.');
+  }
+
+  function dangerT(){
+    console.log('danger');
+    bs4Toast.error('Danger Toast', 'This is danger toast example.');
+  }
+
+  function warning(){
+    bs4Toast.warning('Warning Toast', 'This is warning toast example.');
+  }
+  function imaget(){
+    bs4Toast.show('Toast with Icon', 'This is toast with buttons example.', 
+    {
+      delay : 2000,  
+      icon : {
+        type : 'image',
+        src : 'https://via.placeholder.com/150'
+      }
+  
+    });
+  }
+
+  function icont(){
+    bs4Toast.show('Toast with Icon', 'This is toast with buttons example.', 
+    {
+      delay : 2000,  
+      icon : {
+        type : 'fontawesome',
+        class : 'fa-bell'
+      }
+  
+    });
+  }
+
+  function buttontoast(){
+  bs4Toast.show('Toast with Button', 'This is toast with buttons example.', 
+  {
+    delay : 2000,
+    buttons: [
+    {
+      text : 'Button 1',
+      class : 'btn btn-success btn-sm mr-2',
+      callback : () => {
+        alert('Button 1 clicked');
+      }
+    },
+    {
+      text : 'Button 2',
+      class : 'btn btn-primary btn-sm',
+      callback : () => {
+        alert('Button 2 clicked');
+      }
+    }
+    ],  
+    icon : {
+      type : 'fontawesome',
+      src : 'https://via.placeholder.com/150',
+      class : 'fa-bell'
+    }
+
+  }
+  
+  );
+}
+</script>
+</html>

@@ -1,4 +1,4 @@
- [Trade Shifu](https://tradeshifu.net)  - Free Trading Journal Platform
+> Sponsor : [Trade Shifu](https://tradeshifu.net)  - Free Trading Journal Platform
 
 # Bootstrap Advanced Toast by Rajendra
 ![img](https://i.imgur.com/QylYusC.png)
